@@ -1,0 +1,10 @@
+Github'ın LFS sisteminin getirdiği kısıtlamalar yüzünden dosyalarda değişiklik yaparak yeni repoya geçtik.
+Neredeyse bütün yüksek boyutlu LFS zorlayan dosyalar düzenlendi ve LFS sistemi tamamen kaldırıldı.
+Tek bir dosyanın boyutu 111 MB, kendisi bölmek çok zaman alacağı için doğrudan drive ile aktarım sağlandı.
+Assets/Sponza/Sponza.fbx şeklinde yerleştirirseniz proje eksiksiz şekilde açılacaktır.
+
+Drive Linki: https://drive.google.com/file/d/1MWmxEdrG-3BZgxtTa6q7ZwbXEFgX3pBD/view?usp=sharing
+VirusTotal: https://www.virustotal.com/gui/file/ffd248574309805b6423b264d3c1de9a423d67fef3d6522559b0b0532197337f?nocache=1
+
+Önceki Repo Linki: https://github.com/hasanzsoy/Medivel_Game2
+Önceki repo üzerinden commit geçmişini görüntüleyebilirsiniz, o projenin bittiği noktada bu projenin güncellemeleri yer almaktadır.
