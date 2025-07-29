@@ -14,8 +14,10 @@ public class QuestManager : MonoBehaviour
         public int rewardGold;
         public bool isPlaceholder;
 
-        public int targetCount;     // Gereken öldürme sayýsý
+        public int targetCount;     // Gereken öldürme/toplama sayýsý
         public int currentCount;    // Oyuncunun ilerlemesi
+        public string targetType;   // Hedef düþman veya malzeme tipi
+        public string questType;    // "kill" veya "gather"
         public bool isCompleted => currentCount >= targetCount;
     }
 
@@ -37,21 +39,16 @@ public class QuestManager : MonoBehaviour
         PopulateQuestList();
     }
 
-
     void CreateQuests()
     {
-        // Gerçek görev
-        quests.Add(new QuestData
+        // Örnek: 3 random görev oluþtur
+        for (int i = 0; i < 3; i++)
         {
-            questID = "001",
-            title = "Orman Kurtlarýný Yok Et",
-            description = "Yakýndaki ormanda 3 kurdu yok et.",
-            rewardGold = 100,
-            isPlaceholder = false
-        });
+            quests.Add(GenerateRandomQuest(i));
+        }
 
         // Placeholder görevler
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 2; i++)
         {
             quests.Add(new QuestData
             {
@@ -61,6 +58,69 @@ public class QuestManager : MonoBehaviour
                 rewardGold = 0,
                 isPlaceholder = true
             });
+        }
+    }
+
+    QuestData GenerateRandomQuest(int index)
+    {
+        // Görev türleri
+        string[] questTypes = { "kill", "gather" };
+        string[] enemyTypes = { "Kurt", "Haydut" };
+        string[] gatherTypes = { "Odun", "Taþ" };
+
+        // Rastgele görev türü seç
+        string selectedQuestType = questTypes[0]; //debug amaçlý av 
+        //string selectedQuestType = questTypes[Random.Range(0, questTypes.Length)];
+
+        switch (selectedQuestType)
+        {
+            case "kill":
+                {
+                    string target = enemyTypes[Random.Range(0, enemyTypes.Length)];
+                    int count = Random.Range(1, 5); // 1-4 arasý
+                    return new QuestData
+                    {
+                        questID = $"kill_{index}",
+                        title = $"{count} {target} öldür",
+                        description = $"Çevredeki {target.ToLower()}lardan {count} tanesini yok et.",
+                        rewardGold = 50 + count * 30,
+                        isPlaceholder = false,
+                        targetCount = count,
+                        currentCount = 0,
+                        targetType = target,
+                        questType = "kill"
+                    };
+                }
+            case "gather":
+                {
+                    string material = gatherTypes[Random.Range(0, gatherTypes.Length)];
+                    int count = Random.Range(5, 11); // 5-10 arasý
+                    return new QuestData
+                    {
+                        questID = $"gather_{index}",
+                        title = $"{count} {material} topla",
+                        description = $"{count} adet {material.ToLower()} bul ve topla.",
+                        rewardGold = 40 + count * 20,
+                        isPlaceholder = false,
+                        targetCount = count,
+                        currentCount = 0,
+                        targetType = material,
+                        questType = "gather"
+                    };
+                }
+            // Yeni görev tipleri için buraya ekleyebilirsiniz:
+            // case "deliver":
+            //     ...
+            default:
+                // Bilinmeyen tipte placeholder görev döndür
+                return new QuestData
+                {
+                    questID = $"unknown_{index}",
+                    title = "Bilinmeyen Görev",
+                    description = "Bu görev tipi henüz eklenmedi.",
+                    rewardGold = 0,
+                    isPlaceholder = true
+                };
         }
     }
 
@@ -97,5 +157,4 @@ public class QuestManager : MonoBehaviour
         Debug.Log($"Görev kabul edildi: {quest.title}");
         ActiveQuestTracker.instance.SetActiveQuest(quest);
     }
-
 }

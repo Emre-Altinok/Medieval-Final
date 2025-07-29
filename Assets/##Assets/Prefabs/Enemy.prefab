@@ -82,7 +82,7 @@ RectTransform:
   m_GameObject: {fileID: 2538999765332766783}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 408.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.005, y: 0.005, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4817956703943767661}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 0.1
   m_PresetInfoIsWorld: 1
 --- !u!114 &174204240564848981
 MonoBehaviour:
@@ -407,7 +407,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 529.5621
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_LocalPosition.y
@@ -415,7 +415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 408.5
+      value: 449
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_LocalRotation.w
@@ -536,12 +536,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6102236b07445047a703301317c4a9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthBarFill: {fileID: 0}
-  detectionRange: 10
-  attackRange: 2
-  attackCooldown: 1.5
-  attackDamage: 20
+  maxHealth: 50
+  healthBarFill: {fileID: 690344301802793447}
+  detectionRange: 20
+  attackRange: 1.5
+  attackCooldown: 2
+  attackDamage: 10
+  minMoveSpeed: 3
+  maxMoveSpeed: 10
   playerTransform: {fileID: 0}
   attackCollider: {fileID: 8937885612059541152}
 --- !u!54 &7057456335744652798
