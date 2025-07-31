@@ -98,21 +98,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"[PlayerController] OnTriggerEnter: {other.name}, Tag: {other.tag}");
+       // Debug.Log($"[PlayerController] OnTriggerEnter: {other.name}, Tag: {other.tag}");
         if (other.CompareTag("QuestBoard"))
         {
             nearQuestBoard = true;
-            Debug.Log("[PlayerController] QuestBoard alanýna girildi, nearQuestBoard = true");
+            //Debug.Log("[PlayerController] QuestBoard alanýna girildi, nearQuestBoard = true");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log($"[PlayerController] OnTriggerExit: {other.name}, Tag: {other.tag}");
+        //Debug.Log($"[PlayerController] OnTriggerExit: {other.name}, Tag: {other.tag}");
         if (other.CompareTag("QuestBoard"))
         {
             nearQuestBoard = false;
-            Debug.Log("[PlayerController] QuestBoard alanýndan çýkýldý, nearQuestBoard = false");
+           // Debug.Log("[PlayerController] QuestBoard alanýndan çýkýldý, nearQuestBoard = false");
         }
     }
 
@@ -120,24 +120,24 @@ public class PlayerController : MonoBehaviour
     {
 
         if (!context.performed) return;
-        Debug.Log($"[PlayerController] OnInteract çaðrýldý. phase: {context.phase}, performed: {context.performed}, nearQuestBoard: {nearQuestBoard}, uiManager: {(uiManager != null)}");
+       // Debug.Log($"[PlayerController] OnInteract çaðrýldý. phase: {context.phase}, performed: {context.performed}, nearQuestBoard: {nearQuestBoard}, uiManager: {(uiManager != null)}");
 
         if (uiManager == null) return;
 
         // Eðer panel açýksa kapat, kapalýysa (ve yakýndaysa) aç
         if (uiManager.questPanel != null && uiManager.questPanel.activeSelf)
         {
-            Debug.Log("[PlayerController] Quest panel açýk, kapatýlýyor.");
+           // Debug.Log("[PlayerController] Quest panel açýk, kapatýlýyor.");
             uiManager.CloseQuestPanel();
         }
         else if (nearQuestBoard)
         {
-            Debug.Log("[PlayerController] Quest panel kapalý ve yakýnda, açýlýyor.");
+          //  Debug.Log("[PlayerController] Quest panel kapalý ve yakýnda, açýlýyor.");
             uiManager.OpenQuestPanel();
         }
         else
         {
-            Debug.Log("[PlayerController] Koþullar saðlanmadý, panel açýlmadý.");
+          //  Debug.Log("[PlayerController] Koþullar saðlanmadý, panel açýlmadý.");
         }
     }
 

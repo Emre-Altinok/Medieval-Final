@@ -80,12 +80,12 @@ public class EnemyVariant : MonoBehaviour
             agent.speed = targetSpeed;
             agent.SetDestination(playerTransform.position);
 
-            Debug.Log($"[Enemy] Takip: Hedefe gidiliyor. Mesafe: {distance:F2}, Hýz: {targetSpeed:F2}");
+            //Debug.Log($"[Enemy] Takip: Hedefe gidiliyor. Mesafe: {distance:F2}, Hýz: {targetSpeed:F2}");
 
             float normalizedSpeed = Mathf.InverseLerp(minMoveSpeed, maxMoveSpeed, agent.velocity.magnitude);
             animator.SetFloat("Speed", normalizedSpeed);
 
-            Debug.Log($"[Enemy] Agent velocity: {agent.velocity.magnitude:F2}, Animator Speed: {normalizedSpeed:F2}");
+            //Debug.Log($"[Enemy] Agent velocity: {agent.velocity.magnitude:F2}, Animator Speed: {normalizedSpeed:F2}");
         }
         else if (distance <= attackRange)
         {
@@ -101,14 +101,14 @@ public class EnemyVariant : MonoBehaviour
             {
                 animator.SetTrigger("Attack");
                 lastAttackTime = Time.time;
-                Debug.Log("[Enemy] Saldýrý tetiklendi.");
+                //Debug.Log("[Enemy] Saldýrý tetiklendi.");
             }
         }
         else
         {
             agent.isStopped = true;
             animator.SetFloat("Speed", 0f);
-            Debug.Log("[Enemy] Oyuncu menzilde deðil, idle.");
+           // Debug.Log("[Enemy] Oyuncu menzilde deðil, idle.");
         }
     }
 

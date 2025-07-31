@@ -451,7 +451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: EnemyVariant
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       propertyPath: m_Controller
@@ -480,10 +480,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5437414247319271296}
+      addedObject: {fileID: 6917171747277964360}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1385813409306523331}
+      addedObject: {fileID: 6305034743566427707}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5437414247319271296}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7057456335744652798}
@@ -501,6 +504,44 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ce9460a48732014798cafa0bb5887ae, type: 3}
   m_PrefabInstance: {fileID: 5128379566940888457}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6917171747277964360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470400041098092760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74cc7beaf548b494cb7fa0d10e3c6c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 20
+  attackRange: 1.5
+  attackCooldown: 2
+  attackDamage: 10
+  minMoveSpeed: 3
+  maxMoveSpeed: 10
+  playerTransform: {fileID: 0}
+  attackCollider: {fileID: 8937885612059541152}
+  enemyType: Haydut
+--- !u!114 &6305034743566427707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470400041098092760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2352a07f675b859428458c90bbedc3a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  healthBarFill: {fileID: 690344301802793447}
+  canRegenerate: 0
+  regenRate: 2
+  regenDelay: 3
 --- !u!136 &5437414247319271296
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -524,28 +565,6 @@ CapsuleCollider:
   m_Height: 2.5082407
   m_Direction: 1
   m_Center: {x: 0, y: 0.75412035, z: 0}
---- !u!114 &1385813409306523331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5470400041098092760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6102236b07445047a703301317c4a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50
-  healthBarFill: {fileID: 690344301802793447}
-  detectionRange: 20
-  attackRange: 1.5
-  attackCooldown: 2
-  attackDamage: 10
-  minMoveSpeed: 3
-  maxMoveSpeed: 10
-  playerTransform: {fileID: 0}
-  attackCollider: {fileID: 8937885612059541152}
 --- !u!54 &7057456335744652798
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -13,23 +13,22 @@ public class QuestManager : MonoBehaviour
         public string description;
         public int rewardGold;
         public bool isPlaceholder;
-
-        public int targetCount;     // Gereken öldürme/toplama sayýsý
-        public int currentCount;    // Oyuncunun ilerlemesi
-        public string targetType;   // Hedef düþman veya malzeme tipi
-        public string questType;    // "kill" veya "gather"
+        public int targetCount;
+        public int currentCount;
+        public string targetType;
+        public string questType;
         public bool isCompleted => currentCount >= targetCount;
     }
 
     public List<QuestData> quests = new List<QuestData>();
 
     [Header("UI")]
-    public Transform questListContainer;       // ScrollView içindeki Content objesi
-    public GameObject questButtonPrefab;       // Buton prefabý
-    public TMP_Text titleText;                 // Sað panel baþlýk
-    public TMP_Text descriptionText;           // Sað panel açýklama
-    public TMP_Text rewardText;                // Sað panel ödül
-    public Button acceptButton;                // Kabul et tuþu
+    public Transform questListContainer;
+    public GameObject questButtonPrefab;
+    public TMP_Text titleText;
+    public TMP_Text descriptionText;
+    public TMP_Text rewardText;
+    public Button acceptButton;
 
     private QuestData selectedQuest;
 
@@ -37,95 +36,35 @@ public class QuestManager : MonoBehaviour
     {
         CreateQuests();
         PopulateQuestList();
+        acceptButton.interactable = false;
+        acceptButton.GetComponentInChildren<TMP_Text>().text = "Kabul Et";
+        acceptButton.onClick.RemoveAllListeners();
     }
 
     void CreateQuests()
     {
-        // Örnek: 3 random görev oluþtur
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
-            quests.Add(GenerateRandomQuest(i));
+            quests.Add(QuestGenerator.GenerateRandomQuest());
         }
-
-        // Placeholder görevler
-        for (int i = 0; i < 2; i++)
-        {
-            quests.Add(new QuestData
-            {
-                questID = $"placeholder_{i}",
-                title = "Görev Henüz Eklenmedi",
-                description = "Bu görev henüz hazýrlanmadý.",
-                rewardGold = 0,
-                isPlaceholder = true
-            });
-        }
-    }
-
-    QuestData GenerateRandomQuest(int index)
-    {
-        // Görev türleri
-        string[] questTypes = { "kill", "gather" };
-        string[] enemyTypes = { "Kurt", "Haydut" };
-        string[] gatherTypes = { "Odun", "Taþ" };
-
-        // Rastgele görev türü seç
-        string selectedQuestType = questTypes[0]; //debug amaçlý av 
-        //string selectedQuestType = questTypes[Random.Range(0, questTypes.Length)];
-
-        switch (selectedQuestType)
-        {
-            case "kill":
-                {
-                    string target = enemyTypes[Random.Range(0, enemyTypes.Length)];
-                    int count = Random.Range(1, 5); // 1-4 arasý
-                    return new QuestData
-                    {
-                        questID = $"kill_{index}",
-                        title = $"{count} {target} öldür",
-                        description = $"Çevredeki {target.ToLower()}lardan {count} tanesini yok et.",
-                        rewardGold = 50 + count * 30,
-                        isPlaceholder = false,
-                        targetCount = count,
-                        currentCount = 0,
-                        targetType = target,
-                        questType = "kill"
-                    };
-                }
-            case "gather":
-                {
-                    string material = gatherTypes[Random.Range(0, gatherTypes.Length)];
-                    int count = Random.Range(5, 11); // 5-10 arasý
-                    return new QuestData
-                    {
-                        questID = $"gather_{index}",
-                        title = $"{count} {material} topla",
-                        description = $"{count} adet {material.ToLower()} bul ve topla.",
-                        rewardGold = 40 + count * 20,
-                        isPlaceholder = false,
-                        targetCount = count,
-                        currentCount = 0,
-                        targetType = material,
-                        questType = "gather"
-                    };
-                }
-            // Yeni görev tipleri için buraya ekleyebilirsiniz:
-            // case "deliver":
-            //     ...
-            default:
-                // Bilinmeyen tipte placeholder görev döndür
-                return new QuestData
-                {
-                    questID = $"unknown_{index}",
-                    title = "Bilinmeyen Görev",
-                    description = "Bu görev tipi henüz eklenmedi.",
-                    rewardGold = 0,
-                    isPlaceholder = true
-                };
-        }
+        //for (int i = 0; i < 2; i++)
+        //{
+        //    quests.Add(new QuestData
+        //    {
+        //        questID = $"placeholder_{i}",
+        //        title = "Görev Henüz Eklenmedi",
+        //        description = "Bu görev henüz hazýrlanmadý.",
+        //        rewardGold = 0,
+        //        isPlaceholder = true
+        //    });
+        //}
     }
 
     void PopulateQuestList()
     {
+        foreach (Transform child in questListContainer)
+            Destroy(child.gameObject);
+
         foreach (var quest in quests)
         {
             GameObject buttonObj = Instantiate(questButtonPrefab, questListContainer);
@@ -146,15 +85,66 @@ public class QuestManager : MonoBehaviour
         descriptionText.text = quest.description;
         rewardText.text = $"Ödül: {quest.rewardGold} altýn";
 
-        acceptButton.interactable = !quest.isPlaceholder;
+        UpdateAcceptButtonUI();
+    }
 
+    void UpdateAcceptButtonUI()
+    {
         acceptButton.onClick.RemoveAllListeners();
-        acceptButton.onClick.AddListener(() => AcceptQuest(quest));
+
+        bool isAccepted = ActiveQuestTracker.instance != null && ActiveQuestTracker.instance.activeQuests.Contains(selectedQuest);
+
+        if (selectedQuest == null || selectedQuest.isPlaceholder)
+        {
+            acceptButton.interactable = false;
+            acceptButton.GetComponentInChildren<TMP_Text>().text = "Kabul Et";
+            return;
+        }
+
+        if (!isAccepted)
+        {
+            acceptButton.interactable = true;
+            acceptButton.GetComponentInChildren<TMP_Text>().text = "Kabul Et";
+            acceptButton.onClick.AddListener(() => AcceptQuest(selectedQuest));
+        }
+        else if (selectedQuest.isCompleted)
+        {
+            acceptButton.interactable = true;
+            acceptButton.GetComponentInChildren<TMP_Text>().text = "Tamamla";
+            acceptButton.onClick.AddListener(() => CompleteQuest(selectedQuest));
+        }
+        else
+        {
+            acceptButton.interactable = false;
+            acceptButton.GetComponentInChildren<TMP_Text>().text = "Devam Ediliyor";
+        }
     }
 
     void AcceptQuest(QuestData quest)
     {
+        if (quest == null || quest.isPlaceholder) return;
         Debug.Log($"Görev kabul edildi: {quest.title}");
-        ActiveQuestTracker.instance.SetActiveQuest(quest);
+        ActiveQuestTracker.instance.AddActiveQuest(quest);
+        UpdateAcceptButtonUI();
+    }
+
+    void CompleteQuest(QuestData quest)
+    {
+        Debug.Log($"Görev tamamlandý: {quest.title} - Ödül: {quest.rewardGold} altýn");
+        if (ActiveQuestTracker.instance != null)
+        {
+            ActiveQuestTracker.instance.CompleteQuest(quest);
+        }
+
+        quests.Remove(quest);
+        quests.Add(QuestGenerator.GenerateRandomQuest());
+
+        PopulateQuestList();
+
+        selectedQuest = null;
+        titleText.text = "";
+        descriptionText.text = "";
+        rewardText.text = "";
+        UpdateAcceptButtonUI();
     }
 }

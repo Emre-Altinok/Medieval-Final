@@ -3,7 +3,147 @@ guid: 52a52192bf37ef543bb0dcfc6578c80b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: arch_stone_wall_01
+    second: {fileID: 2100000, guid: 02e8c78a12a21a04893dfaf55dc842f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brickwall_01
+    second: {fileID: 2100000, guid: 36dfdebaf5b3c644c93b15c17d06543e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: brickwall_02
+    second: {fileID: 2100000, guid: b0cf8d7fb4ed48640a125d5581e38899, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceiling_plaster_01
+    second: {fileID: 2100000, guid: 7c2df027f27d0b841ac35f0abbf18c63, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ceiling_plaster_02
+    second: {fileID: 2100000, guid: a4b137ba5788e9e4fb1c5f59c905ee3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: column_1stfloor
+    second: {fileID: 2100000, guid: 6e5aa5fa698c69d498d200aa272f5276, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: column_brickwall_01
+    second: {fileID: 2100000, guid: d042319ed3a2a114cb1f7e6d9dcfc98e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: column_head_1stfloor
+    second: {fileID: 2100000, guid: 280aa1452a0e9eb4986b8f40b8ff4d84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: column_head_2ndfloor_02
+    second: {fileID: 2100000, guid: cd4bc8f3d9fc7944b875c555680b0dd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: column_head_2ndfloor_03
+    second: {fileID: 2100000, guid: cf170da9c9b04ea479869fbb88703a5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dirt_decal
+    second: {fileID: 2100000, guid: b858dc413e060074baf4c82c25c6c99f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_stoneframe_01
+    second: {fileID: 2100000, guid: 9aaaa334f9754d94fb2db4584b289263, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: door_stoneframe_02
+    second: {fileID: 2100000, guid: dda588f6bba071b4ca9fa1311c4c879c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: floor_01
+    second: {fileID: 2100000, guid: dc930b0202be37941a4ceb084529dcd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: d5e12114610599d48a22d6257068fe81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lamp_glass_01
+    second: {fileID: 2100000, guid: 2256469c249968449978bf7c79df1f57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light_bulb
+    second: {fileID: 2100000, guid: ba80f0b3473c3bc4e80773aff61c86f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_door
+    second: {fileID: 2100000, guid: 155ad3873ee1c5e4fbfcf63deeb1a300, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ornament_01
+    second: {fileID: 2100000, guid: 72aed75446831cc42b3f8aebc319e174, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ornament_lion
+    second: {fileID: 2100000, guid: 56f2cfc954b97cc4b9a3ff231b81797b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof_tiles_01
+    second: {fileID: 2100000, guid: fdd12c5d7da8ffc41ab69c8a1fca72a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stone_trims_01
+    second: {fileID: 2100000, guid: 1d275504b029288419dd4099cc5350ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stone_trims_02
+    second: {fileID: 2100000, guid: d0f0f16771d43644a8470caa04e75733, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stones_01_tile
+    second: {fileID: 2100000, guid: 8ff8701307ba2e2419a9b7589c1a33d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: stones_2ndfloor
+    second: {fileID: 2100000, guid: 1c8bbc53c7b00514a901174bce2c3c66, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: window_frame_01
+    second: {fileID: 2100000, guid: d37d5bf2692cffd4f8cf4f95dea44852, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_01
+    second: {fileID: 2100000, guid: a3e16a89844d398488e717f33309c356, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_door_01
+    second: {fileID: 2100000, guid: 4d1c376aa7792f74f9ea6b2b7970db30, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

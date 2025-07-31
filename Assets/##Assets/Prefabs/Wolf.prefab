@@ -807,7 +807,7 @@ GameObject:
   - component: {fileID: 16924577099227637}
   m_Layer: 0
   m_Name: Wolf
-  m_TagString: Enemy
+  m_TagString: EnemyVariant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,9 +820,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175852}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.28635725, z: 0, w: 0.95812297}
-  m_LocalPosition: {x: -1.6315856, y: -2.3763413e-17, z: 1.0702089}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.28635734, z: 0, w: 0.9581229}
+  m_LocalPosition: {x: 511.16, y: 6.4823275, z: 510}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 497144}
@@ -835,7 +835,7 @@ Transform:
   - {fileID: 3268305822810944681}
   - {fileID: 6439416047932527973}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -33.28, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9547338
 Animator:
   serializedVersion: 7
@@ -1663,7 +1663,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

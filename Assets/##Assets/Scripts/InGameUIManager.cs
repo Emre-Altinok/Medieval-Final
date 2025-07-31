@@ -37,7 +37,7 @@ public class InGameUIManager : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("[InGameUIManager] OnEnable çaðrýldý.");
+        //Debug.Log("[InGameUIManager] OnEnable çaðrýldý.");
         menuAction = new InputAction(type: InputActionType.Button, binding: "<Keyboard>/escape");
         menuAction.performed += ctx => ToggleMenu();
         menuAction.Enable();
@@ -46,7 +46,7 @@ public class InGameUIManager : MonoBehaviour
 
     void OnDisable()
     {
-        Debug.Log("[InGameUIManager] OnDisable çaðrýldý.");
+        //Debug.Log("[InGameUIManager] OnDisable çaðrýldý.");
         if (menuAction != null)
         {
             menuAction.performed -= ctx => ToggleMenu();
@@ -56,7 +56,7 @@ public class InGameUIManager : MonoBehaviour
 
     private void ToggleMenu()
     {
-        Debug.Log($"[InGameUIManager] ToggleMenu çaðrýldý. isMenuOpen: {isMenuOpen}");
+        //Debug.Log($"[InGameUIManager] ToggleMenu çaðrýldý. isMenuOpen: {isMenuOpen}");
         if (isMenuOpen)
             CloseSettingsMenu();
         else
@@ -65,7 +65,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void OpenSettingsMenu()
     {
-        Debug.Log("[InGameUIManager] OpenSettingsMenu çaðrýldý.");
+        //Debug.Log("[InGameUIManager] OpenSettingsMenu çaðrýldý.");
         if (settingsPanel != null)
             settingsPanel.SetActive(true);
 
@@ -77,7 +77,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void CloseSettingsMenu()
     {
-        Debug.Log("[InGameUIManager] CloseSettingsMenu çaðrýldý.");
+        //Debug.Log("[InGameUIManager] CloseSettingsMenu çaðrýldý.");
         if (settingsPanel != null)
             settingsPanel.SetActive(false);
 
@@ -89,15 +89,15 @@ public class InGameUIManager : MonoBehaviour
 
     public void OpenQuestPanel()
     {
-        Debug.Log("[InGameUIManager] OpenQuestPanel çaðrýldý.");
+        //Debug.Log("[InGameUIManager] OpenQuestPanel çaðrýldý.");
         if (questPanel != null)
         {
             questPanel.SetActive(true);
-            Debug.Log("[InGameUIManager] questPanel.SetActive(true) çaðrýldý.");
+            //Debug.Log("[InGameUIManager] questPanel.SetActive(true) çaðrýldý.");
         }
         else
         {
-            Debug.LogWarning("[InGameUIManager] questPanel referansý atanmadý!");
+            //Debug.LogWarning("[InGameUIManager] questPanel referansý atanmadý!");
         }
 
         Time.timeScale = 0f;
@@ -108,7 +108,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void CloseQuestPanel()
     {
-        Debug.Log("[InGameUIManager] CloseQuestPanel çaðrýldý.");
+        //Debug.Log("[InGameUIManager] CloseQuestPanel çaðrýldý.");
         if (questPanel != null)
             questPanel.SetActive(false);
 
@@ -120,7 +120,7 @@ public class InGameUIManager : MonoBehaviour
 
     public void ShowDamagePanel()
     {
-        Debug.Log("[InGameUIManager] ShowDamagePanel çaðrýldý.");
+        //Debug.Log("[InGameUIManager] ShowDamagePanel çaðrýldý.");
         if (damagePanel != null)
         {
             damagePanel.SetActive(true);

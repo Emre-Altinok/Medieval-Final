@@ -1,0 +1,24 @@
+{
+  "types": [
+    {
+      "questType": "kill",
+      "targets": [ "Kurt", "Haydut", "Troll" ],
+      "minCount": 1,
+      "maxCount": 5,
+      "rewardBase": 50,
+      "rewardPerTarget": 30,
+      "titleFormat": "{count} {target} öldür",
+      "descFormat": "Çevredeki {target}lardan {count} tanesini yok et."
+    },
+    {
+      "questType": "gather",
+      "targets": [ "Odun", "Taş", "Mantar" ],
+      "minCount": 3,
+      "maxCount": 10,
+      "rewardBase": 40,
+      "rewardPerTarget": 20,
+      "titleFormat": "{count} {target} topla",
+      "descFormat": "{count} adet {target} bul ve topla."
+    }
+  ]
+}

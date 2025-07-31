@@ -33,7 +33,7 @@ public class Point : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
         float dist = Vector3.Distance(transform.position, targetPosition);
-        Debug.Log("Hedefe uzaklýk: " + dist);  // Bu satýrý ekle
+        //Debug.Log("Hedefe uzaklýk: " + dist);  
 
         if (dist < 0.5f)
         {
