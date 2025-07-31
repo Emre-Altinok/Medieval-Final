@@ -19548,11 +19548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510880766}
   serializedVersion: 2
-<<<<<<< Updated upstream
   m_LocalRotation: {x: -0.07213507, y: 0.10299127, z: 0.007488932, w: 0.9920349}
-=======
-  m_LocalRotation: {x: -0.072135106, y: 0.102991275, z: 0.0074889367, w: 0.9920349}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -81849,10 +81845,7 @@ SceneRoots:
   - {fileID: 3453807238855230788}
   - {fileID: 6708175783737051978}
   - {fileID: 1987601415471928074}
-<<<<<<< Updated upstream
   - {fileID: 1530301189}
   - {fileID: 531095806}
   - {fileID: 990675037}
   - {fileID: 4708331576169349388}
-=======
->>>>>>> Stashed changes
