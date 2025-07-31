@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f58ce59d9c92c4f885af11dfa35738, type: 3}
+  m_Name: goblinDialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: "sava\u015F\xE7\u0131"
+    sentence: 'sen o musun '
+  - speakerName: bilge
+    sentence: "kaybolmu\u015F g\xF6r\xFCn\xFCyorsun evlat"
+  - speakerName: "sava\u015F\xE7\u0131"
+    sentence: "\xF6zg\xFCr ve kay\u0131p..."
+  - speakerName: bilge
+    sentence: "gelece\u011Fini biliyordum kaderimizin de\u011Fi\u015Fme zaman\u0131
+      gelmi\u015Fti"
+  - speakerName: "sava\xE7\u0131"
+    sentence: "neyden s\xF6z ediyorsun sen "
+  - speakerName: bilge
+    sentence: "ah evlat ne y\xFCkler var s\u0131rt\u0131nda "
+  - speakerName: "sava\u015F\xE7\u0131"
+    sentence: "laf\u0131 uzatma ihtiyar ve bana elmas\u0131n yerini s\xF6yle "

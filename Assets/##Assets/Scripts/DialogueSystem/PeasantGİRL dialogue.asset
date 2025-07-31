@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f58ce59d9c92c4f885af11dfa35738, type: 3}
+  m_Name: "PeasantG\u0130RL dialogue"
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: "k\xF6yl\xFC k\u0131z "
+    sentence: "\xE7i\xE7ek vereyim abime"
+  - speakerName: "sava\u015Fc\u0131"
+    sentence: 'annie sen misin '
+  - speakerName: "k\xF6yl\xFC k\u0131z "
+    sentence: "\u015F\u015F\u015F burada \xF6yle \u015Feyler s\xF6yleme "
+  - speakerName: "sava\u015F\xE7\u0131"
+    sentence: "bana yard\u0131m etmen gerek"

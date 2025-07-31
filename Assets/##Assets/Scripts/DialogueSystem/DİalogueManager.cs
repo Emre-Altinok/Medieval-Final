@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
             var line = currentLines[currentIndex];
             dialogueText.text = $"{line.speakerName}: {line.sentence}";
             currentIndex++;
-            yield return new WaitForSeconds(autoDelay);
+            yield return new WaitForSeconds(2f);
         }
 
         EndDialogue();
