@@ -22,9 +22,13 @@ public class PlayerDialogueController : MonoBehaviour
 
     void TryStartDialogue()
     {
+        // Diyalog paneli açýksa tekrar baþlatma!
+        if (dialogueManager == null || dialogueManager.dialoguePanel.activeSelf)
+            return;
+
         if (currentTrigger != null)
         {
-            dialogueManager.StartDialogue(currentTrigger.dialogue);
+            dialogueManager.StartDialogue(currentTrigger.dialogue, currentTrigger);
         }
     }
 
@@ -44,4 +48,3 @@ public class PlayerDialogueController : MonoBehaviour
         }
     }
 }
-

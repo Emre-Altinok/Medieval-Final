@@ -13,11 +13,17 @@ MonoBehaviour:
   m_Name: "PeasantG\u0130RL dialogue"
   m_EditorClassIdentifier: 
   lines:
-  - speakerName: "k\xF6yl\xFC k\u0131z "
-    sentence: "\xE7i\xE7ek vereyim abime"
-  - speakerName: "sava\u015Fc\u0131"
-    sentence: 'annie sen misin '
-  - speakerName: "k\xF6yl\xFC k\u0131z "
-    sentence: "\u015F\u015F\u015F burada \xF6yle \u015Feyler s\xF6yleme "
-  - speakerName: "sava\u015F\xE7\u0131"
-    sentence: "bana yard\u0131m etmen gerek"
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "Merhaba, \xE7i\xE7ek al\u0131r m\u0131yd\u0131n\u0131z?"
+  - speakerName: Asker
+    sentence: "\xC7i\xE7ek... Annie!? Seni kar\u015F\u0131ma kader \xE7\u0131karm\u0131\u015F
+      olmal\u0131!"
+  - speakerName: Annie
+    sentence: "Birine benzettiniz san\u0131r\u0131m beyefendi."
+  - speakerName: Asker
+    sentence: "L\xFCtfen, beni unutman m\xFCmk\xFCn de\u011Fil."
+  - speakerName: Annie
+    sentence: "Peki, tamam. \xC7ok ses \xE7\u0131karma. Demirci oca\u011F\u0131na
+      git. Orada sana yard\u0131m ederler."
+  - speakerName: Asker
+    sentence: "Te\u015Fekk\xFCr ederim. Kendine iyi bak."

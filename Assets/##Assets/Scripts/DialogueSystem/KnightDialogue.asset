@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f58ce59d9c92c4f885af11dfa35738, type: 3}
+  m_Name: KnightDialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - speakerName: ????
+    sentence: "Uyan eski dostum. Yeterince dinlendin. G\xF6reve geri d\xF6nme vaktin
+      geldi."
+  - speakerName: Asker
+    sentence: Bir dakika... Marcus sen misin yoksa?
+  - speakerName: Marcus
+    sentence: "\u0130\u015Fte anahtarlar. \xC7\u0131k\u0131nca kimseye g\xF6r\xFCnmeden
+      \xE7i\xE7ek\xE7i k\u0131z\u0131 bul. Kendine dikkat et."

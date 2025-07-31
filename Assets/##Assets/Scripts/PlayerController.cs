@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip deathClip;
 
+    public float interactDistance = 2.5f;
+
     // Private variables
     private CharacterController _controller;
     private Animator _animator;
@@ -123,6 +125,19 @@ public class PlayerController : MonoBehaviour
        // Debug.Log($"[PlayerController] OnInteract çaðrýldý. phase: {context.phase}, performed: {context.performed}, nearQuestBoard: {nearQuestBoard}, uiManager: {(uiManager != null)}");
 
         if (uiManager == null) return;
+
+        // Kapý etkileþimi
+        Ray ray = new Ray(transform.position + Vector3.up * 1.0f, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, interactDistance))
+        {
+            Door door = hit.collider.GetComponent<Door>();
+            if (door != null)
+            {
+                door.Interact();
+                return;
+            }
+        }
+
 
         // Eðer panel açýksa kapat, kapalýysa (ve yakýndaysa) aç
         if (uiManager.questPanel != null && uiManager.questPanel.activeSelf)
