@@ -23,7 +23,7 @@ public class EnemyVariant : MonoBehaviour
     private Animator animator;
     private NavMeshAgent agent;
     private float lastAttackTime = -999f;
-    private bool isDead = false;
+    public bool isDead { get; private set; }
     private bool wasInCombat = false;
 
     private void Awake()
@@ -57,13 +57,13 @@ public class EnemyVariant : MonoBehaviour
         if (isDead || playerTransform == null) return;
 
         float distance = Vector3.Distance(transform.position, playerTransform.position);
-        bool inCombat = (distance <= detectionRange);
-        if (inCombat != wasInCombat)
-        {
-            wasInCombat = inCombat;
-            if (AudioManager.Instance != null)
-                AudioManager.Instance.SetCombatState(inCombat);
-        }
+        //bool inCombat = (distance <= detectionRange);
+        //if (inCombat != wasInCombat)
+        //{
+        //    wasInCombat = inCombat;
+        //    if (AudioManager.Instance != null)
+        //        AudioManager.Instance.SetCombatState(inCombat);
+        //}
 
         if (!agent.isOnNavMesh)
         {
@@ -157,6 +157,10 @@ public class EnemyVariant : MonoBehaviour
         agent.isStopped = true;
         if (attackCollider != null)
             attackCollider.enabled = false;
+
+        // Savaþ durumu kapatýlýyor
+        //if (AudioManager.Instance != null)
+        //    AudioManager.Instance.SetCombatState(false);
 
         StartCoroutine(WaitForDeathAnimation());
         Debug.Log("[EnemyVariant] Enemy öldü, obje yok ediliyor.");

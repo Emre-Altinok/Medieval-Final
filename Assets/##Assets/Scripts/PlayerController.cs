@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip walkClip;
     public AudioClip jumpClip;
     public AudioClip deathClip;
+    private bool lastCombatState = false;
 
     public float interactDistance = 2.5f;
 
@@ -219,8 +220,34 @@ public class PlayerController : MonoBehaviour
         HandleCombat();
         HandleBlock();
         UpdateAnimations();
+        CheckCombatState();
     }
+    private void CheckCombatState()
+    {
+        // Tüm EnemyVariant'larý bul
+        var enemies = FindObjectsOfType<EnemyVariant>();
+        bool inCombat = false;
+        foreach (var enemy in enemies)
+        {
+            if (enemy == null || enemy.gameObject == null || enemy.gameObject.activeInHierarchy == false) continue;
+            if (enemy.playerTransform == null) continue;
+            if (enemy.isDead) continue; // Sadece canlý düþmanlar
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance <= enemy.detectionRange)
+            {
+                inCombat = true;
+                break;
+            }
+        }
 
+        // Savaþ durumu deðiþtiyse AudioManager'a bildir
+        if (inCombat != lastCombatState)
+        {
+            lastCombatState = inCombat;
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.SetCombatState(inCombat);
+        }
+    }
     private void TestInputSystem()
     {
         // LogDebug("=== INPUT SYSTEM TEST ===");

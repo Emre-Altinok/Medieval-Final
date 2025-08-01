@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/##Assets/Scenes/AnaMenu.unity
+    guid: 811012d5ee54a5448a0545bb596cedc4
+  - enabled: 1
     path: Assets/##Assets/Scenes/Harita.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:

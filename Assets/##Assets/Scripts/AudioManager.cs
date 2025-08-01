@@ -158,11 +158,12 @@ public class AudioManager : MonoBehaviour
             yield return null;
         }
         activeMusicSource.Stop();
-        activeMusicSource.volume = 1f;
-        // Swap sources
+        activeMusicSource.volume = 1f; // Durdurulan kaynakta volume'u sýfýrla!
+                                       // Swap sources
         var temp = activeMusicSource;
         activeMusicSource = inactiveMusicSource;
         inactiveMusicSource = temp;
+        activeMusicSource.volume = 1f; // Yeni aktif kaynakta volume'u 1 yap!
     }
 
     // Sahne ve savaþ durumuna göre crossfade ile müzik çal
