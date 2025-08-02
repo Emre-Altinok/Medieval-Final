@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     public void OnDialogueEnd()
     {
         // Bu objede OnDialogueEnd fonksiyonu olan bir script varsa çaðýr
-        SendMessage("OnDialogueEnd", SendMessageOptions.DontRequireReceiver);
+        SendMessage("OnDialogueEndEvent", SendMessageOptions.DontRequireReceiver);
     }
 }
 

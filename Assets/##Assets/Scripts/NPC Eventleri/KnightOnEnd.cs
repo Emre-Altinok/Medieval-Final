@@ -4,58 +4,45 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class KnightOnEnd : MonoBehaviour
 {
-    public float walkSpeed = 2f;         // Yürüme hýzý (m/sn)
-    public float walkDistance = 50f;     // Yürüyeceði mesafe (metre)
+    public float fadeDuration = 2f;
+    private Material mat;
 
-    private bool isWalking = false;
-    private Vector3 walkDirection;
-    private Vector3 startPosition;
-    private Rigidbody rb;
-    private Animator animator;
 
-    private void Awake()
+    [Header("Efektler")]
+    public ParticleSystem mistParticles;
+    public Light flashLight;
+    //public AudioSource vanishSound;
+
+
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        mat = new Material(GetComponent<Renderer>().material);
+        GetComponent<Renderer>().material = mat;
     }
 
-    public void OnDialogueEnd()
+    public void OnDialogueEndEvent()
     {
-        if (isWalking) return; // Tekrar baþlatma engeli
-
-        // Arkasýný dön (180 derece döndür)
-        transform.rotation = Quaternion.Euler(0, transform.eulerAngles.y + 180f, 0);
-
-        // Rotasyon güncellendikten sonra yönü al!
-        walkDirection = transform.forward;
-        startPosition = transform.position;
-        isWalking = true;
-
-        // Animatörde yürüme animasyonunu baþlat
-        if (animator != null)
-            animator.SetFloat("Speed", walkSpeed);
-
-        StartCoroutine(WalkAndDestroy());
+        Debug.Log("KnightOnEnd: OnDialogueEndEvent called, starting fade and destroy.");
+        StartCoroutine(FadeAndDestroy());
+        Debug.Log("AFTERLINEKnightOnEnd: OnDialogueEndEvent called, starting fade and destroy.");
     }
 
-    private System.Collections.IEnumerator WalkAndDestroy()
+    private System.Collections.IEnumerator FadeAndDestroy()
     {
-        while (Vector3.Distance(startPosition, transform.position) < walkDistance)
+
+        if (mistParticles != null) mistParticles.Play();
+        if (flashLight != null) flashLight.enabled = true;
+        //if (vanishSound != null) vanishSound.Play();
+
+        float fadeTime = 0f;
+        while (fadeTime < fadeDuration)
         {
-            // Rigidbody ile hareket
-            rb.MovePosition(transform.position + walkDirection * walkSpeed * Time.deltaTime);
-
-            // Animatörde yürüme animasyonu devam etsin
-            if (animator != null)
-                animator.SetFloat("Speed", walkSpeed);
-
+            fadeTime += Time.deltaTime;
+            float amount = Mathf.Clamp01(fadeTime / fadeDuration);
+            mat.SetFloat("_Fade", amount);
             yield return null;
         }
-
-        // Animasyonu durdur
-        if (animator != null)
-            animator.SetFloat("Speed", 0f);
-
+        mat.SetFloat("_Fade", 1f);
         Destroy(gameObject);
     }
 }

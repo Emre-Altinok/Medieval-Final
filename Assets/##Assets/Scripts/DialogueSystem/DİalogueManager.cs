@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI speakerNameText;
+    public TextMeshProUGUI continueText;
     [Header("Typewriter Ayarlarý")]
     public float typewriterSpeed = 0.04f;
 

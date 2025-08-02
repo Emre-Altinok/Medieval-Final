@@ -18,13 +18,13 @@ MonoBehaviour:
   - speakerName: Asker
     sentence: Neredeyim ben?
   - speakerName: ????
-    sentence: "Ge\xE7mi\u015Fin senden \xE7al\u0131nd\u0131. Hat\u0131rlaar\u0131n
+    sentence: "Ge\xE7mi\u015Fin senden \xE7al\u0131nd\u0131. Hat\u0131ralar\u0131n
       birer birer silindi."
   - speakerName: Asker
     sentence: "En son kaledeydim... Buras\u0131 neresi ve neden buraday\u0131m?"
   - speakerName: ????
     sentence: "Ge\xE7mi\u015F g\xFCnahlar\u0131n\u0131n ve ba\u015Far\u0131s\u0131zl\u0131klar\u0131n\u0131n
-      kefatretini \xF6demen i\xE7in sana ikinci bir \u015Fans verildi."
+      kefaretini \xF6demen i\xE7in sana ikinci bir \u015Fans verildi."
   - speakerName: ????
     sentence: "\u015Eimdi kalk aya\u011Fa ve k\u0131l\u0131c\u0131n\u0131 ku\u015Fan.
       \u015Eehirde sana yard\u0131m edecek birileri hala var."

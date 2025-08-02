@@ -16,9 +16,9 @@ MonoBehaviour:
   - speakerName: Asker
     sentence: "Afedersiniz, hangi \u015Fehirdeyiz?"
   - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
-    sentence: "KJayboldun san\u0131r\u0131m. Merak etme herkesin yolu buraya d\xFC\u015Fer."
+    sentence: "Kayboldun san\u0131r\u0131m. Merak etme herkesin yolu buraya d\xFC\u015Fer."
   - speakerName: Asker
-    sentence: "\xD6yle s\xF6ylenebilir."
+    sentence: "\xD6yle de s\xF6ylenebilir."
   - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
     sentence: "Buras\u0131 ba\u015Fkent, buray\u0131 ger\xE7ekten tan\u0131mad\u0131n
       m\u0131?"
@@ -50,4 +50,5 @@ MonoBehaviour:
       b\u0131rak\u0131n."
   - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
     sentence: "Peki, peki. Dilersen hana gidip biraz rahatla, \u015Fehri ke\u015Ffet.
-      Seninle elbnet yine kar\u015F\u0131lar\u0131z."
+      Hanc\u0131n\u0131n seninle konu\u015Facaklar\u0131 olmal\u0131. Benimle elbet
+      yine kar\u015F\u0131la\u015F\u0131rs\u0131n."

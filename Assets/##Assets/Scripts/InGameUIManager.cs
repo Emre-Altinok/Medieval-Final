@@ -135,4 +135,13 @@ public class InGameUIManager : MonoBehaviour
         if (damagePanel != null)
             damagePanel.SetActive(false);
     }
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        }
 }
+
