@@ -44,12 +44,12 @@ public class EnemyVariant : MonoBehaviour
             playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
         // NavMeshAgent ve NavMesh durumu için debug
-        if (agent == null)
-            Debug.LogError("[Enemy] NavMeshAgent bulunamadý!");
-        else if (!agent.isOnNavMesh)
-            Debug.LogError("[Enemy] NavMeshAgent NavMesh üzerinde deðil!");
-        else
-            Debug.Log("[Enemy] NavMeshAgent NavMesh üzerinde ve hazýr.");
+       // if (agent == null)
+           // Debug.LogError("[Enemy] NavMeshAgent bulunamadý!");
+       // else if (!agent.isOnNavMesh)
+          //  Debug.LogError("[Enemy] NavMeshAgent NavMesh üzerinde deðil!");
+       // else
+           // Debug.Log("[Enemy] NavMeshAgent NavMesh üzerinde ve hazýr.");
     }
 
     private void Update()
@@ -151,7 +151,7 @@ public class EnemyVariant : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isDead", true);
-            Debug.Log($"[EnemyVariant] animator.SetBool('isDead', true) çaðrýldý. Animator objesi: {animator.gameObject.name}");
+           // Debug.Log($"[EnemyVariant] animator.SetBool('isDead', true) çaðrýldý. Animator objesi: {animator.gameObject.name}");
         }
 
         agent.isStopped = true;
@@ -163,7 +163,7 @@ public class EnemyVariant : MonoBehaviour
         //    AudioManager.Instance.SetCombatState(false);
 
         StartCoroutine(WaitForDeathAnimation());
-        Debug.Log("[EnemyVariant] Enemy öldü, obje yok ediliyor.");
+       // Debug.Log("[EnemyVariant] Enemy öldü, obje yok ediliyor.");
 
         // Quest tracker iþlemini en sona ve try-catch ile al
         try

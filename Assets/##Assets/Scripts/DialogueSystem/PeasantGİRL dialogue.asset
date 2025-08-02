@@ -13,17 +13,41 @@ MonoBehaviour:
   m_Name: "PeasantG\u0130RL dialogue"
   m_EditorClassIdentifier: 
   lines:
+  - speakerName: Asker
+    sentence: "Afedersiniz, hangi \u015Fehirdeyiz?"
   - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
-    sentence: "Merhaba, \xE7i\xE7ek al\u0131r m\u0131yd\u0131n\u0131z?"
+    sentence: "KJayboldun san\u0131r\u0131m. Merak etme herkesin yolu buraya d\xFC\u015Fer."
   - speakerName: Asker
-    sentence: "\xC7i\xE7ek... Annie!? Seni kar\u015F\u0131ma kader \xE7\u0131karm\u0131\u015F
-      olmal\u0131!"
-  - speakerName: Annie
-    sentence: "Birine benzettiniz san\u0131r\u0131m beyefendi."
+    sentence: "\xD6yle s\xF6ylenebilir."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "Buras\u0131 ba\u015Fkent, buray\u0131 ger\xE7ekten tan\u0131mad\u0131n
+      m\u0131?"
   - speakerName: Asker
-    sentence: "L\xFCtfen, beni unutman m\xFCmk\xFCn de\u011Fil."
-  - speakerName: Annie
-    sentence: "Peki, tamam. \xC7ok ses \xE7\u0131karma. Demirci oca\u011F\u0131na
-      git. Orada sana yard\u0131m ederler."
+    sentence: "Son g\xF6rd\xFC\u011F\xFCmden beri baya\u011F\u0131 de\u011Fi\u015Fmi\u015F...
+      Ger\xE7ekten tan\u0131yamad\u0131m."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "Seni su\xE7layamam. Kral\u0131n son y\u0131llarda yapt\u0131klar\u0131
+      buran\u0131n g\xFCzelli\u011Fini s\xF6k\xFCp ald\u0131."
   - speakerName: Asker
-    sentence: "Te\u015Fekk\xFCr ederim. Kendine iyi bak."
+    sentence: "Eminim kraliyet ellerinden geleni yap\u0131yordur."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "Buray\u0131 mahvetmek i\xE7in ellerinden geleni yapt\u0131klar\u0131ndan
+      emin olabilirsin. Arkamdaki hayvanlar bile mutlu de\u011Fil."
+  - speakerName: Asker
+    sentence: "B\xF6yle s\xF6ylemen ho\u015F de\u011Fil. Benim tan\u0131d\u0131\u011F\u0131m
+      kral her zaman \xFClkesini d\xFC\u015F\xFCn\xFCr ve kollar."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "\u015Eu d\xF6n\xFC\u015Ft\xFC\u011F\xFCn ki\u015Fiye bak, inan\u0131lmazs\u0131n..."
+  - speakerName: Asker
+    sentence: "2 dakika konu\u015Ftuk diye beni tan\u0131d\u0131\u011F\u0131n\u0131
+      zannetme. Ben krall\u0131\u011F\u0131na sad\u0131k bir askerim."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "\u0130\u015Fte orada yan\u0131l\u0131yorsun... Seni uzun zamand\u0131r
+      tan\u0131yorum. \u015Eu an oldu\u011Fun ki\u015Fiyi tan\u0131yam\u0131yorum
+      ama."
+  - speakerName: Asker
+    sentence: "Han\u0131mefendi ben sizi tan\u0131m\u0131yorum. L\xFCtfen sa\xE7malamay\u0131
+      b\u0131rak\u0131n."
+  - speakerName: "\xC7i\xE7ek\xE7i K\u0131z"
+    sentence: "Peki, peki. Dilersen hana gidip biraz rahatla, \u015Fehri ke\u015Ffet.
+      Seninle elbnet yine kar\u015F\u0131lar\u0131z."

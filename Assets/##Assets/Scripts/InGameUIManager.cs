@@ -25,7 +25,7 @@ public class InGameUIManager : MonoBehaviour
     void Start()
     {
 
-        Debug.Log("[InGameUIManager] Start çaðrýldý.");
+     //  Debug.Log("[InGameUIManager] Start çaðrýldý.");
         // Slider baðlantýlarý ayný
         musicSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
         sfxSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
@@ -126,5 +126,13 @@ public class InGameUIManager : MonoBehaviour
             damagePanel.SetActive(true);
             Invoke("HideDamagePanel", 0.5f);
         }
+    }
+
+
+    public void HideDamagePanel()
+    {
+        //Debug.Log("[InGameUIManager] HideDamagePanel çaðrýldý.");
+        if (damagePanel != null)
+            damagePanel.SetActive(false);
     }
 }

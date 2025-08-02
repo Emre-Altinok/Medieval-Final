@@ -38,7 +38,7 @@ public class Point : MonoBehaviour
         if (dist < 0.5f)
         {
             target = (target == PointA) ? PointB : PointA;
-            Debug.Log("Hedef deðiþti! Yeni hedef: " + target.name); // Bu satýrý ekle
+           // Debug.Log("Hedef deðiþti! Yeni hedef: " + target.name); // Bu satýrý ekle
             RotateTowards(target.position);
         }
     }

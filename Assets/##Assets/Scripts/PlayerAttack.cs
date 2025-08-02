@@ -9,13 +9,13 @@ public class PlayerAttack : MonoBehaviour
     {
         if (attackCollider == null)
         {
-            Debug.LogWarning("[PlayerAttack] attackCollider atanmamýþ!");
+          //  Debug.LogWarning("[PlayerAttack] attackCollider atanmamýþ!");
         }
         else
         {
             attackCollider.enabled = false;
         }
-        Debug.Log("[PlayerAttack] Start çaðrýldý.");
+       // Debug.Log("[PlayerAttack] Start çaðrýldý.");
     }
 
     public void EnableAttackCollider()
@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
         if (attackCollider != null)
         {
             attackCollider.enabled = true;
-            Debug.Log("[PlayerAttack] Attack collider ENABLED.");
+          //  Debug.Log("[PlayerAttack] Attack collider ENABLED.");
 
             if (AudioManager.Instance != null)
             {
@@ -32,7 +32,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[PlayerAttack] EnableAttackCollider çaðrýldý ama attackCollider yok!");
+         //   Debug.LogWarning("[PlayerAttack] EnableAttackCollider çaðrýldý ama attackCollider yok!");
         }
     }
 
@@ -41,49 +41,49 @@ public class PlayerAttack : MonoBehaviour
         if (attackCollider != null)
         {
             attackCollider.enabled = false;
-            Debug.Log("[PlayerAttack] Attack collider DISABLED.");
+         //   Debug.Log("[PlayerAttack] Attack collider DISABLED.");
         }
         else
         {
-            Debug.LogWarning("[PlayerAttack] DisableAttackCollider çaðrýldý ama attackCollider yok!");
+         //   Debug.LogWarning("[PlayerAttack] DisableAttackCollider çaðrýldý ama attackCollider yok!");
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log($"[PlayerAttack] OnTriggerEnter: {other.name} tag: {other.tag}");
+       // Debug.Log($"[PlayerAttack] OnTriggerEnter: {other.name} tag: {other.tag}");
 
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("[PlayerAttack] Enemy tagli objeye çarptý.");
+           // Debug.Log("[PlayerAttack] Enemy tagli objeye çarptý.");
             Enemy enemyHealth = other.GetComponent<Enemy>();
             if (enemyHealth != null)
             {
-                Debug.Log($"[PlayerAttack] EnemyHealty bulundu, {attackDamage} damage veriliyor.");
+           //     Debug.Log($"[PlayerAttack] EnemyHealty bulundu, {attackDamage} damage veriliyor.");
                 enemyHealth.TakeDamage(attackDamage);
             }
             else
             {
-                Debug.LogWarning("[PlayerAttack] Enemy tagli objede EnemyHealty componenti yok!");
+           //     Debug.LogWarning("[PlayerAttack] Enemy tagli objede EnemyHealty componenti yok!");
             }
         }
         else if (other.CompareTag("EnemyVariant"))
         {
-            Debug.Log("[PlayerAttack] EnemyVariant tagli objeye çarptý.");
+           // Debug.Log("[PlayerAttack] EnemyVariant tagli objeye çarptý.");
             EnemyVariantHealth enemyHealth = other.GetComponent<EnemyVariantHealth>();
             if (enemyHealth != null)
             {
-                Debug.Log($"[PlayerAttack] EnemyVariantHealty bulundu, {attackDamage} damage veriliyor.");
+            //    Debug.Log($"[PlayerAttack] EnemyVariantHealty bulundu, {attackDamage} damage veriliyor.");
                 enemyHealth.TakeDamage(attackDamage);
             }
             else
             {
-                Debug.LogWarning("[PlayerAttack] EnemyVariant tagli objede EnemyVariantHealty componenti yok!");
+           //     Debug.LogWarning("[PlayerAttack] EnemyVariant tagli objede EnemyVariantHealty componenti yok!");
             }
         }
         else
         {
-            Debug.LogWarning("[PlayerAttack] OnTriggerEnter tetiklendi ama Enemy veya EnemyVariant tagli obje deðil!");
+          //  Debug.LogWarning("[PlayerAttack] OnTriggerEnter tetiklendi ama Enemy veya EnemyVariant tagli obje deðil!");
         }
     }
 }

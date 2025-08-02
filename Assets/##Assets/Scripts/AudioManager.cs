@@ -288,14 +288,16 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(string name)
     {
+        Debug.Log($"[AudioManager] PlaySFX çaðrýldý: {name}");
         if (sfxLibrary.TryGetValue(name, out var clip) && sfxSource != null)
         {
+           // Debug.Log($"[AudioManager] SFX bulundu: {name}, clip: {clip}, sfxSource: {sfxSource}, volume: {sfxSource.volume}, mute: {sfxSource.mute}");
             sfxSource.outputAudioMixerGroup = sfxGroup;
             sfxSource.PlayOneShot(clip);
         }
         else
         {
-            Debug.LogWarning($"[AudioManager] SFX bulunamadý: {name}");
+            Debug.LogWarning($"[AudioManager] SFX bulunamadý veya sfxSource null: {name}");
         }
     }
 
@@ -342,6 +344,7 @@ public class AudioManager : MonoBehaviour
     {
         if (sfxLibrary.TryGetValue(name, out var clip) && swordSource != null)
         {
+            //Debug.Log($"[AudioManager] SFX bulundu: {name}, clip: {clip}, sfxSource: {sfxSource}, volume: {sfxSource.volume}, mute: {sfxSource.mute}");
             swordSource.outputAudioMixerGroup = swordGroup;
             swordSource.PlayOneShot(clip);
         }

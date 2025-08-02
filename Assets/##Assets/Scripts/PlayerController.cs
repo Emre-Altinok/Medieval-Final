@@ -544,11 +544,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void OnBlock(InputAction.CallbackContext context)
-    {
-        _blockInput = context.ReadValueAsButton();
+   // public void OnBlock(InputAction.CallbackContext context)
+   // {
+   //     _blockInput = context.ReadValueAsButton();
         // LogDebug($"OnBlock called: {_blockInput}, Phase: {context.phase}");
-    }
+  //  }
 
     public void OnDeath(InputAction.CallbackContext context)
     {
@@ -579,11 +579,11 @@ public class PlayerController : MonoBehaviour
         if (_playerAttack != null)
         {
             _playerAttack.EnableAttackCollider();
-            Debug.Log("[PlayerController] EnableHitbox çaðrýldý - Attack collider aktif edildi");
+          //  Debug.Log("[PlayerController] EnableHitbox çaðrýldý - Attack collider aktif edildi");
         }
         else
         {
-            Debug.LogWarning("[PlayerController] EnableHitbox çaðrýldý ama _playerAttack null!");
+          //  Debug.LogWarning("[PlayerController] EnableHitbox çaðrýldý ama _playerAttack null!");
         }
     }
     public void DisableHitbox()
@@ -591,11 +591,11 @@ public class PlayerController : MonoBehaviour
         if (_playerAttack != null)
         {
             _playerAttack.DisableAttackCollider();
-            Debug.Log("[PlayerController] DisableHitbox çaðrýldý - Attack collider deaktif edildi");
+          //  Debug.Log("[PlayerController] DisableHitbox çaðrýldý - Attack collider deaktif edildi");
         }
         else
         {
-            Debug.LogWarning("[PlayerController] DisableHitbox çaðrýldý ama _playerAttack null!");
+           // Debug.LogWarning("[PlayerController] DisableHitbox çaðrýldý ama _playerAttack null!");
         }
     }
 
@@ -658,25 +658,25 @@ public class PlayerController : MonoBehaviour
     public void PlaySwordSwingSound()
     {
         if (AudioManager.Instance != null && swordSwingClip != null)
-            AudioManager.Instance.PlaySFX("swordSwingClip");
+            AudioManager.Instance.PlaySword("swordSwingClip");
     }
 
     public void PlayWalkSound()
     {
         if (AudioManager.Instance != null && walkClip != null)
-            AudioManager.Instance.PlaySFX("walkClip");
+            AudioManager.Instance.PlayFootstep("walkClip");
     }
 
     public void PlayJumpSound()
     {
         if (AudioManager.Instance != null && jumpClip != null)
-            AudioManager.Instance.PlaySFX("jumpClip");
+            AudioManager.Instance.PlayJump("jumpClip");
     }
 
     public void PlayDeathSound()
     {
         if (AudioManager.Instance != null && deathClip != null)
-            AudioManager.Instance.PlaySFX("deathClip");
+            AudioManager.Instance.PlayDeath("deathClip");
     }
 
 

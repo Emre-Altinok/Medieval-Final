@@ -24,7 +24,7 @@ public class EnemyVariantHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         UpdateHealthBar();
-        Debug.Log($"[EnemyVariantHealth] Awake: currentHealth = {currentHealth}, maxHealth = {maxHealth}");
+       // Debug.Log($"[EnemyVariantHealth] Awake: currentHealth = {currentHealth}, maxHealth = {maxHealth}");
     }
 
     void Update()
@@ -44,21 +44,21 @@ public class EnemyVariantHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Debug.Log($"[EnemyVariantHealth] TakeDamage çaðrýldý. damage: {damage}, isDead: {isDead}");
+        //Debug.Log($"[EnemyVariantHealth] TakeDamage çaðrýldý. damage: {damage}, isDead: {isDead}");
         if (isDead) return;
 
         float oldHealth = currentHealth;
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log($"[EnemyVariantHealth] {damage} damage alýndý. Önceki: {oldHealth}, Þimdi: {currentHealth}");
+       // Debug.Log($"[EnemyVariantHealth] {damage} damage alýndý. Önceki: {oldHealth}, Þimdi: {currentHealth}");
         UpdateHealthBar();
 
         lastDamageTime = Time.time;
 
         if (currentHealth <= 0)
         {
-            Debug.Log("[EnemyVariantHealth] currentHealth <= 0, Die() çaðrýlýyor.");
+           // Debug.Log("[EnemyVariantHealth] currentHealth <= 0, Die() çaðrýlýyor.");
             Die();
         }
     }
@@ -71,7 +71,7 @@ public class EnemyVariantHealth : MonoBehaviour
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        Debug.Log($"[EnemyVariantHealth] {amount} iyileþti. Önceki: {oldHealth}, Þimdi: {currentHealth}");
+       // Debug.Log($"[EnemyVariantHealth] {amount} iyileþti. Önceki: {oldHealth}, Þimdi: {currentHealth}");
         UpdateHealthBar();
     }
 
@@ -86,7 +86,7 @@ public class EnemyVariantHealth : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-        Debug.Log("[EnemyVariantHealth] Enemy öldü. OnDeath invoke ediliyor.");
+       // Debug.Log("[EnemyVariantHealth] Enemy öldü. OnDeath invoke ediliyor.");
         OnDeath?.Invoke();
     }
 
@@ -94,6 +94,6 @@ public class EnemyVariantHealth : MonoBehaviour
     {
         if (healthBarFill != null)
             healthBarFill.fillAmount = (float)currentHealth / maxHealth;
-        Debug.Log($"[EnemyVariantHealth] UpdateHealthBar: fillAmount = {healthBarFill?.fillAmount}");
+       // Debug.Log($"[EnemyVariantHealth] UpdateHealthBar: fillAmount = {healthBarFill?.fillAmount}");
     }
 }

@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speakerName: ????
-    sentence: "Uyan eski dostum. Yeterince dinlendin. G\xF6reve geri d\xF6nme vaktin
-      geldi."
+    sentence: 'Uyan sevgili dostum. Yeterince dinlendin. '
   - speakerName: Asker
-    sentence: Bir dakika... Marcus sen misin yoksa?
-  - speakerName: Marcus
-    sentence: "\u0130\u015Fte anahtarlar. \xC7\u0131k\u0131nca kimseye g\xF6r\xFCnmeden
-      \xE7i\xE7ek\xE7i k\u0131z\u0131 bul. Kendine dikkat et."
+    sentence: Neredeyim ben?
+  - speakerName: ????
+    sentence: "Ge\xE7mi\u015Fin senden \xE7al\u0131nd\u0131. Hat\u0131rlaar\u0131n
+      birer birer silindi."
+  - speakerName: Asker
+    sentence: "En son kaledeydim... Buras\u0131 neresi ve neden buraday\u0131m?"
+  - speakerName: ????
+    sentence: "Ge\xE7mi\u015F g\xFCnahlar\u0131n\u0131n ve ba\u015Far\u0131s\u0131zl\u0131klar\u0131n\u0131n
+      kefatretini \xF6demen i\xE7in sana ikinci bir \u015Fans verildi."
+  - speakerName: ????
+    sentence: "\u015Eimdi kalk aya\u011Fa ve k\u0131l\u0131c\u0131n\u0131 ku\u015Fan.
+      \u015Eehirde sana yard\u0131m edecek birileri hala var."
+  - speakerName: Asker
+    sentence: "Dur! Sorular\u0131ma cevap ver!"
