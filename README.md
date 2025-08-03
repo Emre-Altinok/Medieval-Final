@@ -6,9 +6,9 @@ Daha önceki repo linkimiz: [https://github.com/hasanzsoy/Medivel_Game2](https:/
 
 ---
 
+## 🎮 Proje Adı: Ashes of Loyalty  
 
-##🎮 Proje Adı: Ashes of Loyalty  
-##👥 Takım Adı: Kosinüs Team 
+## 👥 Takım Adı: Kosinüs Team 
 
 ## 📝 Oyun Özeti : 
 Ashes of Loyalty 3D RPG mekaniklerine sahip bir oyundur. Geçmişini hatırlamayan bir savaşçı eski tanıdıklarıyla konuşarak kendini ve hikayeyi keşfeder. Bu süreçte bir asker olarak vahşi hayvanlarla, haydutlarla veya canavarlarla dövüşebilir.  
