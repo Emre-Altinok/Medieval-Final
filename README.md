@@ -1,15 +1,30 @@
-Takım Üyeleri
-=============
+# NOT  
+GitHub'ın LFS sisteminin getirdiği kısıtlamalar nedeniyle dosyalarda değişiklik yapılarak yeni bir repoya geçiş yapılmıştır.  
+Daha önceki repo linkimiz: [https://github.com/hasanzsoy/Medivel_Game2](https://github.com/hasanzsoy/Medivel_Game2)  
 
-| Üye Adı | Rolü |
-|-------------------------|------------------|
-| Zümre Güven             | Scrum Master     |
-| Emre Altınok            | Product Owner    |
-| Hasan Özsoy             | Developer        |
-| Sena Akkaya             | Developer        |
-| Yusuf Selim Çetinkaya   | Developer        |
+Önceki repo üzerinden commit geçmişini inceleyebilirsiniz. Bu projedeki güncellemeler, önceki projenin tamamlandığı noktadan devam etmektedir.
 
 ---
+
+
+# 🎮 Proje Adı: Ashes of Loyalty  
+# 👥 Takım Adı: Kosinüs Team 
+
+## 📝 Oyun Özeti : 
+Ashes of Loyalty 3D RPG mekaniklerine sahip bir oyundur. Geçmişini hatırlamayan bir savaşçı eski tanıdıklarıyla konuşarak kendini ve hikayeyi keşfeder. Bu süreçte bir asker olarak vahşi hayvanlarla, haydutlarla veya canavarlarla dövüşebilir.  
+Oyunun iki önemli unsuru aksiyon ve hikayedir. Savaşmak için düşmanlar asla bitmezken çeşitli NPC'lerle çeşitli diyaloglar kurulabilir.
+
+---
+
+## Takım Üyeleri
+| Üye Adı               | Rolü           |
+|-----------------------|----------------|
+| Zümre Güven           | Scrum Master   |
+| Emre Altınok          | Product Owner  |
+| Hasan Özsoy           | Developer      |
+| Sena Akkaya           | Developer      |
+| Yusuf Selim Çetinkaya | Developer      |
+
 
 <details>
 <summary><strong>SPRINT 1</strong></summary>
@@ -156,3 +171,109 @@ Toplantı sırasında alınan ekran görüntüleri ve örnek mesajlaşmalar payl
 - Sprint sonunda, yapılan işler hedeflenen puanlamaya uygun şekilde tamamlandı ve proje takvimiyle uyumlu ilerleme sağlandı.
 ------------------------------------------------------------------------------------------------
 </details>
+
+
+<details>
+<summary><strong>SPRINT 3</strong></summary>
+
+<br>
+
+**Sprint Notları:**  
+- Oyunun son geliştirmeleri bu sprintte yapılmıştır.  
+- Diyalog sistemi, yapay zekâ ve envanter gibi sistemler finalize edilmiştir.
+- Ses dosyaları ve oyun içi etkileşimler entegre edilmiştir. 
+- Oyunun final sahnesi hazırlanmış ve oyun bitirme mantığı tamamlanmıştır.
+
+**Sprint İçinde Tahmin Edilen Tamamlanacak Puan:** 110 Puan  
+| Task (Görev)                             | Açıklama                                                                 | Puan |
+|------------------------------------------|--------------------------------------------------------------------------|------|
+| Diyalog Sistemi                          | Karakterler arası konuşma ve seçimli diyaloglar entegre edildi          | 20   |
+| Envanter Sistemi                         | Oyuncunun eşya toplama, saklama ve görüntüleme sistemi geliştirildi     | 20   |
+| Ses Efektleri                            | Oyundaki olaylara bağlı ses efektleri ve arka plan müzikleri eklendi    | 15   |
+| Final Sahnesi                            | Oyunun son bölümünde bitiş ekranı, kapanış müziği ve çıkış butonu       | 15   |
+| Yapay Zekâ ile Etkileşimli NPC'ler       | Oyuncuya görev veren ve yönlendiren akıllı karakterler eklendi          | 20   |
+| Oyun İçi Kayıt Mekanizması               | Oyuncunun ilerlemesini kayıt edebilme özelliği geliştirildi             | 10   |
+| Performans Optimizasyonu                 | Oyun içi FPS iyileştirmeleri ve gereksiz asset temizliği yapıldı        | 10   |
+| **Toplam**                               |                                                                          | **110** |
+
+
+**Puan Tahmin Mantığı:** Bu sprintte oyunun son işlevsel özellikleri tamamlandığı için en yüksek puan bu sprinte ayrılmıştır.  
+ <br>
+1.Sprint:90 puan <br>
+2.Sprint:100 puan<br>
+3.Sprint: 110 puan <br>
+olarak öngörülmüştür.
+
+**Daily Scrum:** Takım içi iletişim **WhatsApp** ve **Slack** üzerinden sürdürüldü.  
+- Her akşam yapılan kısa toplantılarda güncellemeler aktarıldı.  
+Toplantı sırasında alınan ekran görüntüleri ve örnek mesajlaşmalar paylaşılmıştır.
+<p align="center">
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s310.jpeg"width="250" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s311.jpeg" width="250" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s312.jpeg" width="250" /><br><br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s313.jpeg" width="250" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s314.jpeg" width="250" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s315.jpeg" width="250" /><br><br>
+
+
+
+</p>
+
+**Sprint Board Updates:**  Sprint boyunca görevler **Trello** panosunda kartlar hâlinde takip edildi ve tamamlanma durumları güncellendi.
+
+<p align="center">
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s316.jpeg" style="width:80%; height:auto; max-height:100px;" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s317.jpeg" style="width:80%; height:auto; max-height:100px;" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s318.jpeg" style="width:80%; height:auto; max-height:100px;" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s319.jpeg" style="width:80%; height:auto; max-height:100px;" />
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s320.jpeg" style="width:80%; height:auto; max-height:100px;" />
+
+</p>
+
+**Screenshot:**
+<p align="center">
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s31.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s32.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s33.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s34.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s35.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s36.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+   <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s37.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s38.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+  <img src="https://github.com/Emre-Altinok/Medieval-Final/blob/main/Sprint/s39.jpeg" height="330" hspace="10" style="width:80%;" />
+<br>
+
+
+</p>
+
+
+**Sprint Review:**  
+- Yapay zekâ, diyalog sistemi ve envanter sistemi test edilerek sunum yapıldı.  
+- Tüm sistemlerin entegre çalıştığı bir demo ile proje kapanışı gerçekleştirildi.  
+- Katılımcılar: Emre Altınok, Hasan Özsoy, Sena Akkaya, Yusuf Selim Çetinkaya,Zümre Güven  
+
+
+**Sprint Retrospective:**  
+- Proje genelinde görev dağılımı dengelendiği için ekip çalışması verimli oldu.  
+- Geriye dönük testler sayesinde hatalar erken tespit edilip giderildi.  
+- Tüm takım projenin teknik ve görsel olarak başarılı olduğunu değerlendirdi.
+--------------------------------------------------------------------------------------------
+</details>
+
