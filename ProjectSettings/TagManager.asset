@@ -12,6 +12,7 @@ TagManager:
   - SFXSlider
   - QuestBoard
   - EnemyVariant
+  - Recorder
   layers:
   - Default
   - TransparentFX
